@@ -1,8 +1,10 @@
 import React, {Suspense, useRef} from "react"
-import {Canvas} from "@react-three/fiber"
-import { Environment } from "@react-three/drei"
+import {Canvas, extend} from "@react-three/fiber"
+import { Environment, OrbitControls } from "@react-three/drei"
 import Screen from './Screen'
 import Model from "./Model" 
+import Scene from "./Scene"
+extend({OrbitControls})
 
 function App() {
   const screen = useRef()
@@ -13,12 +15,14 @@ function App() {
       <Canvas shadows
       onCreated={(state) => state.events.connect(screen.current)}
       raycaster={{ computeOffsets: ({ clientX, clientY }) => ({ offsetX: clientX, offsetY: clientY }) }}
-      style={{'backgroundColor':'#F8C7C8'}}>
+      style={{'backgroundColor':'#F8C7C8'}}
+      camera={{ position: [10, 5, -5], fov: 75 }}>
         <ambientLight intensity={1} />
         <Suspense fallback={null}>
-          <Model scroll={scroll} />
+          <Scene/>
           <Environment preset="city" />
         </Suspense>
+        <OrbitControls autoRotate={true} minDistance={2}/>
       </Canvas>
       <Screen ref={screen} caption={caption} scroll={scroll} />
     </>
