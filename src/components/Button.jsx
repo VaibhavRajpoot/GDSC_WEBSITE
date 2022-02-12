@@ -10,7 +10,7 @@ function Button() {
     return (
         <div>
         <Div>
-            <img src={logo} />
+            <img style={{height:"50px",width:"100px"}} src={logo} />
             <button className="N" >OVERVIEW</button>
             <button className="N" >ABOUT</button>
             <button className="N" >GITHUB</button>
@@ -44,7 +44,7 @@ img {
     white-space: nowrap;
     text-align: center;
     float: right;
-    background-color: #F8C7C8;
+    background-color: #EEEEEE;
     width:100px;
     padding:10px;
     margin-top: 8px;
@@ -60,9 +60,9 @@ img {
     border-radius: 100px;
     transition:1.5s;
     &:hover {
-        box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee,
-        0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
-        text-shadow: 0 0 5px #15f4ee,0 0 5px #15f4ee;
+        box-shadow: 0 5px 50px 0 #11468F inset, 0 5px 50px 0 #15f4ee,
+        0 5px 50px 0 #11468F inset, 0 5px 50px 0 #11468F;
+        text-shadow: 0 0 5px #11468F,0 0 5px #11468F;
     }
 }
 

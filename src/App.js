@@ -13,7 +13,7 @@ function App() {
       <Canvas shadows
       onCreated={(state) => state.events.connect(screen.current)}
       raycaster={{ computeOffsets: ({ clientX, clientY }) => ({ offsetX: clientX, offsetY: clientY }) }}
-      style={{'backgroundColor':'#F8C7C8'}}>
+      style={{'backgroundColor':'#041562'}}>
         <ambientLight intensity={1} />
         <Suspense fallback={null}>
           <Model scroll={scroll} />

@@ -1,7 +1,9 @@
-@import url("https://rsms.me/inter/inter.css");
+/* @import url("https://rsms.me/inter/inter.css"); */
 
 * {
   box-sizing: border-box;
+  font-family: 'Staatliches', cursive !important ;
+  /* font-family: 'Roboto Mono', monospace !important */
 }
 
 html,
@@ -56,6 +58,12 @@ body {
   -webkit-font-smoothing: auto;
 }
 
+.dot h1{
+  color: #DA1212 !important ;
+  font-weight: bolder !important ; 
+  font-size: 55px !important;
+}
+
 .dot {
   pointer-events: none;
   margin: 5em;
@@ -65,7 +73,7 @@ body {
   max-width: 600px;
   padding: 0;
   padding: 80px;
-  color: #000000;
+  color: #EEEEEE;
   line-height: 1.6em;
   font-size: 20px;
   font-family: 'Montserrat Bold';
