@@ -15,12 +15,8 @@ function App() {
       <Canvas shadows
       onCreated={(state) => state.events.connect(screen.current)}
       raycaster={{ computeOffsets: ({ clientX, clientY }) => ({ offsetX: clientX, offsetY: clientY }) }}
-<<<<<<< HEAD
-      style={{'backgroundColor':'#041562'}}>
-=======
-      style={{'backgroundColor':'#F8C7C8'}}
+      style={{'backgroundColor':'#041562'}}
       camera={{ position: [10, 5, -5], fov: 75 }}>
->>>>>>> 81fe0ebc287009f96cf2ef0d715a12eeb6eb9ecc
         <ambientLight intensity={1} />
         <Suspense fallback={null}>
           <Scene/>
